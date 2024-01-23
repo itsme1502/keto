@@ -9,7 +9,7 @@ function App() {
     <>
       <StyledEngineProvider injectFirst>
         <ResponsiveAppBar/>
-        <div className='bg-red-500'>sex</div>
+        
       </StyledEngineProvider>
     </>
   )

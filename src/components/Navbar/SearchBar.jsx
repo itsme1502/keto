@@ -11,7 +11,7 @@ export default function SearchBar() {
     return (
         <Paper
             component="form"
-            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+            sx={{ display: 'flex', alignItems: 'center', width: 400, marginY: "16px" }}
         >
             {/* <IconButton sx={{ p: '10px' }} aria-label="menu">
                 <MenuIcon />
