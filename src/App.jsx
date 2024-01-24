@@ -5,7 +5,6 @@ import { StyledEngineProvider } from '@mui/material'
 import ResponsiveAppBar from './components/Navbar/Navbar'
 import HeaderImage from './components/HeaderImage'
 import MediaCard from './components/Card'
-// import Carousel from './components/Carousel'
 import Carousels from './components/Carousel'
 
 function App() {
