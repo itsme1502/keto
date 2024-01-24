@@ -37,9 +37,9 @@ function ResponsiveAppBar() {
 
     return (
         <AppBar position="static" className='bg-white'>
-            <Container maxWidth='xl' className=' flex  items-center justify-around p-0 '>
-                <Toolbar className=' w-full' disableGutters>
-                    <div className='flex w-full justify-between items-center'>
+            <Container maxWidth='xl' className=' flex  items-center justify-around p-0'>
+                <Toolbar className=' w-full'  disableGutters>
+                    <div className='md:hidden flex w-full justify-between items-center'>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                             <IconButton
                                 size="large"
