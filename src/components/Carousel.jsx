@@ -5,7 +5,7 @@ import CardContainer from "./CardContainer";
 
 const dummyData = {
   title:
-    " My Little Boy Can’t Breathe, And I’m Helpless. Please Save Him For Me L.",
+    " My Little Boy Can’t Breathe, And I’m Helpless. Please Save Him For Me .",
   requestedby: "By Anyone",
   raised: "₹ 91,03,705 raised out of ",
   goal: "₹1,10,00,000",
@@ -23,9 +23,19 @@ const dummyData1 = {
   left: "Days left",
   contribution: "❤️561 supporters",
 };
+
+const dummyinfo = {
+  success: "Success Stories",
+  purpose: "You are the reason Suraj gets to live his dream",
+  description:
+    "You are the reason Suraj gets to live his dream Our son’s cancer had relapsed after 2.5 years of chemotherapy we knew we couldn’t afford his life-saving treatment. But thanks to your donations prayers, he underwent successful treatment is recovering well. May God bless you all for saving his life!-Dhanasar (Father)",
+};
+
+const array3 = [dummyinfo, dummyinfo, dummyinfo];
+
+
 const array = [dummyData, dummyData, dummyData];
 const array2 = [dummyData1, dummyData,dummyData1];
-// array2[0].title = "sex";
 function Carousels() {
   return (
     <div>

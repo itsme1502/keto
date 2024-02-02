@@ -36,7 +36,6 @@ function MediaCard({
             variant="body3"
             color="text.secondary"
             className="mt-2.5 ml-2"
-            requestedby={requestedby}
           >
             {requestedby}
           </Typography>

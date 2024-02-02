@@ -6,27 +6,20 @@ import ResponsiveAppBar from './components/Navbar/Navbar'
 import HeaderImage from './components/HeaderImage'
 import MediaCard from './components/Card'
 import Carousels from './components/Carousel'
+import Stories from './components/Stories'
+import SuccessCarousel from './components/SuccessCarousel'
 
 function App() {
-  const items = [
-        {
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!"
-        },
-        {
-            name: "Random Name #2",
-            description: "Hello World!"
-        }
-    ]
   return (
     <>
       <StyledEngineProvider injectFirst>
-        <ResponsiveAppBar/>
+        <ResponsiveAppBar />
         <HeaderImage />
-        <Carousels/>
+        <Carousels />
+        <SuccessCarousel />
       </StyledEngineProvider>
     </>
   );
 }
 
-export default App
+export default App;

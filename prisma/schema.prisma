@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id              String       @id @default(uuid())
+  name            String
+  email           String       @unique
+  password        String
+  isAdmin         Boolean
+  mobileNo        String       @db.VarChar(10)
+  rollNo          String?
+  event           Event[]      @relation("Participants")
+  eventId         String?
+  organiseEvent   Event[]      @relation("Organisers")
+  organiseeventId String?
+  fundraiserId    String?
+  funds           Fundraiser[] @relation("FundsRaisedForUser")
+  donations       Donations[]
+}
+
+model Event {
+  id           String   @id @default(uuid())
+  name         String
+  description  String
+  startTime    DateTime
+  endTime      DateTime
+  participants User[]   @relation("Participants")
+  organsisers  User[]   @relation("Organisers")
+}
+
+model Fundraiser {
+  id         String      @id @default(uuid())
+  purpose    String
+  raisedFor  User        @relation("FundsRaisedForUser", fields: [recieverId], references: [id])
+  recieverId String
+  donations  Donations[]
+
+  @@index([recieverId])
+}
+
+model Donations {
+  id           String   @id @default(uuid())
+  fundraiserId String
+  userId       String
+  createdAt    DateTime @default(now())
+  fundraiser Fundraiser @relation(fields: [fundraiserId], references: [id])
+  user       User       @relation(fields: [userId], references: [id])
+
+  @@index([fundraiserId])
+  @@index([userId])
+}
